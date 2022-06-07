@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import {currentThunk, tokenThunk, usersThunk, usersShowMoreThunk} from './asyncthunc';
+import {currentThunk, tokenThunk, usersThunk, usersShowMoreThunk, loginThunk} from './asyncthunc';
 
 axios.defaults.baseURL = 'https://frontend-test-assignment-api.abz.agency/api/v1';
 
@@ -127,7 +127,29 @@ const authSlice = createSlice({
         isAuth: false,
       };
     },
+    [loginThunk.pending](state, action) {
+      return {
+        ...state,       
+        isLoading: true,
+        isAuth: true
+      };
+    },
+    [loginThunk.fulfilled](state, action) {
+      return {
+        ...state,
+        isLoading: false,
+      };
+    },
+    [loginThunk.rejected](state, action) {
+      return {
+        ...state,
+        isLoading: false,
+        error: action.payload,
+        isAuth: false,
+      };
+    },
    },
 });
 export const { incrementPage, initUser} = authSlice.actions
 export default authSlice.reducer;
+

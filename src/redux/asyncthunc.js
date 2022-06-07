@@ -77,7 +77,7 @@ export const currentThunk = createAsyncThunk(
   );
 
   export const loginThunk = createAsyncThunk(
-    'users/users',    
+    'users/login',    
     async (formData,{ rejectWithValue}) => {
 const headers = { 
   "Content-Type": "multipart/form-data",
@@ -86,20 +86,8 @@ const headers = {
   try {
         const { data } = await axios.post(signUp, formData, { headers });
   console.log(data);
-        alert({
-          text: `Добро пожаловать, ${data.user_id}`,
-          delay: 1500,
-          hide: true,
-        });
         return data;
       } catch (error) {
-        console.log(error);
-
-        alert({
-          text: 'Нету такого пользователя, попробуйте другое',
-          delay: 1500,
-          hide: true,
-        });
         return rejectWithValue({
           error,
         });
