@@ -1,0 +1,25 @@
+@import '../base/colors';
+
+.button{
+    width: 100px;
+    height: 34px;
+  color: $btn-text-color;
+  background-color: $btn-normal-color;
+  border: none;
+  border-radius: 80px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  &:first-child{
+      margin-right: 10px;
+  }
+  &:hover{
+    background-color: $btn-hover-color;
+  }
+  &:disabled{
+    color: $btn-disabled-text;
+    background-color: $btn-disabled-color;
+  }
+  }

@@ -1,0 +1,25 @@
+@import './breakpoints';
+@import './colors';
+
+.container{
+    background-color: $section-bg-color; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    @media screen and (min-width: 360px) and (max-width: $breakpoint-tablet) {
+    width: 360px; 
+         padding: 40px 16px 100px 16px;
+        }
+      @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop ) {
+       width: $breakpoint-tablet;
+       padding: 40px 32px 100px 32px;
+      }
+     @media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-big-desktop ) {
+      width: $breakpoint-desktop;
+      padding: 40px 60px 100px 60px;
+    }
+   @media screen and (min-width: $breakpoint-big-desktop)  {
+    width: 1170px;
+    padding: 40px 0 100px 0;
+ }
+}

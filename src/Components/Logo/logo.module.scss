@@ -1,0 +1,10 @@
+@import '../../sass//base/colors';
+
+.logo{
+    display: flex;
+    align-items: center;
+    & img{
+        width: 104px;
+        height: 26px;
+    }    
+}

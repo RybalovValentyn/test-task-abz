@@ -1,0 +1,23 @@
+
+.container{
+    background-color: #E5E5E5; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    @media screen and (min-width: 360px) and (max-width: 768px) {
+    max-width: 360px; 
+         padding: 40px 16px 100px 16px;
+        }
+      @media screen and (min-width: 768px) and (max-width: 1024px ) {
+       max-width: 768px;
+       padding: 40px 32px 100px 32px;
+      }
+     @media screen and (min-width: 1024px) and (max-width: 2560px ) {
+      max-width: 1024px;
+      padding: 40px 60px 100px 60px;
+    }
+   @media screen and (min-width: 2560px)  {
+    max-width: 1170px;
+    padding: 40px 0 100px 0;
+ }
+}

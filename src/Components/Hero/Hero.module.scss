@@ -1,0 +1,66 @@
+@import '../../sass/base/breakpoints';
+
+.Hero{
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media screen and  (max-width: $breakpoint-tablet) {
+      max-width: $breakpoint-mobile;
+      height: 500px;
+      background-image: url('../../images/background/bgmobi.png');
+        }
+      @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop ) {
+        max-width: $breakpoint-tablet;
+        height: 500px;
+        background-image: url('../../images/background/bgtablet.png');
+      }
+     @media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-big-desktop ) {
+       max-width: $breakpoint-desktop;
+       height: 650px;
+       background-image: url('../../images/background/bgdesk.png');
+   }
+   @media screen and (min-width: $breakpoint-big-desktop)  {
+     max-width: 1170px;
+     height: 650px;
+     background-image: url('../../images/background/bgdeskbig.png');
+ }
+}
+.HeroItem{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+text-align: center;
+width: 380px;
+padding-top: 40px;
+@media screen and (max-width: $breakpoint-tablet ){
+    width: 328px;
+    
+}
+h1 {
+display: block;
+font-family: 'Nunito', sans-serif;
+font-style: Regular;
+font-size: 40px;
+line-height: 40px;
+color: #ffff;
+    @media screen and (min-width: $breakpoint-tablet ){
+margin-top: 49px;
+    }  
+    @media screen and (min-width: $breakpoint-desktop ){
+        margin-top: 124px;
+            } 
+            @media screen and (min-width: $breakpoint-big-desktop ){
+                margin-top: 144px;
+                    } 
+}
+p{
+    margin-top: 21px;
+    margin-bottom: 32px;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 26px;
+    color: #ffff;   
+}
+}

@@ -1,0 +1,113 @@
+@import '../../sass/base/colors';
+@import '../../sass//base/breakpoints';
+
+.header{
+color: $pl-text-filled;
+font-family: 'Nunito', sans-serif;
+font-style: Regular;
+font-size: 40px;
+line-height: 40px;
+
+}
+
+.form{
+margin-left: auto;
+margin-right: auto;
+
+    @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+        width: 328px;      
+       
+           }
+         @media screen and (min-width: $breakpoint-tablet){
+            width: 380px;            
+         };
+        //  :nth-child(3){
+        //      position: relative;
+        //      &:focus-within{
+        //          .lable{
+        //             background-color: black;
+        //          }
+                 
+        //      }
+
+        //  }
+        //  :nth-child(4){
+        //     position: relative;
+        //     position: absolute;
+        //     display: block;
+        //     font-family: 'Nunito', sans-serif;
+        //     font-size: 12px;
+        //     line-height: 14px;
+        //     margin-left: 16px;
+        //     color: $pl-text-enebled;
+
+        // };
+.input{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    display: block;
+    width: 100%;
+    height: 54px;
+    margin-top: 50px;
+    padding: 16px;
+    background-color: $body-bg-color;
+    border: 1px solid $radio-border;
+    border-radius: 4px;
+    
+    &::placeholder{
+         color: $pl-text-enebled;
+          };
+          &:focus-within:valid{
+            outline: none;
+           }
+    &:focus-within:invalid{
+        outline: none;
+        border: 1px solid red
+    }
+
+
+
+}
+
+.lable{    
+    margin-left: -210px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    line-height: 14px; 
+    color: #7E7E7E;
+}
+};
+
+.radioInput{
+    padding: 0;
+margin-top: 11px;
+margin-bottom: 47px;
+list-style: none;
+text-align: left;
+& li{
+    display: block;
+    margin-top: 7px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 26px; 
+}
+}
+.fileinput{
+margin-bottom: 50px;
+}
+.section{
+    padding-bottom: 50px;
+}
+.formContainer{
+    width: 100%;
+    text-align: left;
+    margin-top: 43px;
+    margin-bottom: 11px;
+    p{
+
+        font-family: 'Nunito', sans-serif;
+        font-size: 16px;
+        line-height: 26px; 
+    }
+}

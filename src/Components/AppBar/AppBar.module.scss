@@ -1,0 +1,34 @@
+@import '../../sass//base/colors';
+@import '../../sass/base/breakpoints';
+
+
+.AppHeader{   
+  background-color: #ffff; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+     width: $breakpoint-mobile;
+         padding-left: 23px;
+        padding-right: 16px;
+        }
+      @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop ) {
+       width: $breakpoint-tablet;
+        padding-left: 39px;
+       padding-right: 32px;
+      }
+     @media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-big-desktop ) {
+      width: $breakpoint-desktop;
+      padding-left: 67px;
+     padding-right: 60px;
+    }
+   @media screen and (min-width: $breakpoint-big-desktop)  {
+    width: 1170px;
+    padding-left: 0;
+   padding-right: 0;
+ }
+}
